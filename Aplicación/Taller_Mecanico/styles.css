@@ -1,0 +1,355 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    padding-bottom:60px;
+    background-image: url('Fondos/0.jpg');
+    min-height: 100vh;
+}
+
+main {
+    padding: 2em;
+}
+
+
+
+/* Encabezado */
+header {
+    background-color: #000000;
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #00b7ff;
+    text-decoration: none;
+}
+
+
+
+/* Hero section */
+.hero {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+
+
+/* Carrusel */
+.carousel-container {
+    text-align: center;
+    margin-bottom: 2em;
+    position: relative; 
+    width: 50%; 
+    margin: 0 auto;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto; 
+    transition: opacity 2s ease-in-out; 
+}
+
+.carousel img.active {
+    opacity: 1; 
+}
+
+/* Segunda sección con video */
+.video-section {
+    position: relative;
+    height: 100vh; /* Hace que la sección ocupe toda la altura de la ventana */
+    overflow: hidden;
+}
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-43%, -43%);
+
+}
+
+
+/* Sección de valores */
+.valores ul {
+    list-style-type: square;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 0.5em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacia el contenido */
+    align-items: center; /* Alinea verticalmente */
+}
+
+.social-media {
+    flex-grow: 1; /* Permite que este div ocupe el espacio disponible */
+    text-align: center; /* Centra el contenido dentro del div */
+}
+
+
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #0000007c;
+}
+
+form label, form input, form button {
+    margin: 0.5em 0;
+}
+
+form input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 1em;
+    background-color: #00b7ff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #00b7ff;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+/* Servicios */
+.services {
+    padding: 5px;
+}
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-item {
+    background-color: #3d3c3cc5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    width: calc(30% - 30px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.small-image {
+    max-width: 50%;
+    height: 50%;
+}
+
+.service-item h3, h1 {
+    color: #00b7ff;
+}
+
+
+
+
+/* Nosotros */
+.about-us {
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.about-content {
+    float: right; 
+    margin-right: 30px; 
+    justify-content: space-between;
+}
+
+.about-content p {
+    margin-right: 30px;
+    color: #ffffff;
+    max-width: 400px;
+    background-color: #000000b0;
+    padding: 5px;
+}
+
+
+.images {
+    clear: both;
+    margin-top: 5px; 
+    float: right; 
+}
+
+.about-image {
+    float: left; 
+    width: 200px; 
+    height: auto; 
+    border-radius: 3px;
+    margin-right: 20px; 
+}
+
+.about-us h1 {
+    text-align: right;
+    color: #00b7ff;
+    margin-bottom: 10px;
+    display: flex;
+    width: 400px;
+    background-color: #000000b0;
+    padding: 5px;
+}
+
+.valores {
+    float: right;
+    width: 470px; 
+    margin: 20px;
+    clear: both;
+    background-color: #000000b0;
+    padding: 5px;
+}
+.valores h1 {
+    color: #00b7ff;
+    font-weight: bold;
+  
+}
+/* Sección del mapa */
+.map {
+    text-align: center; 
+}
+
+.map-title {
+    font-weight: bold; 
+    color: #00b7ff;
+}
+ /* Media queries para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    /* Ajuste del carrusel para pantallas más pequeñas */
+    .carousel-container {
+        width: 80%;
+    }
+    
+    /* Servicios: ajustar tamaño de los elementos */
+    .service-item {
+        width: calc(50% - 30px); /* Dos columnas en lugar de tres */
+    }
+    
+    /* Ajustes para la sección "Nosotros" */
+    .about-image {
+        width: 150px; /* Reducir tamaño de la imagen */
+        margin-right: 10px;
+    }
+
+    .about-content, .about-us h1 {
+        text-align: center;
+    }
+
+    /* Formulario de contacto: más ancho en pantallas medianas */
+    form {
+        width: 80%;
+    }
+}
+
+/* Media queries para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    /* Carrusel para pantallas más pequeñas */
+    .carousel-container {
+        width: 100%;
+    }
+
+    /* Servicios: una columna en pantallas pequeñas */
+    .service-item {
+        width: 100%;
+    }
+
+    /* Encabezado: lista de navegación en una columna */
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    /* Formulario de contacto: ajuste para móviles */
+    form {
+        width: 100%;
+    }
+
+    /* Sección "Nosotros" */
+    .about-image {
+        width: 100px; /* Imagen más pequeña en móviles */
+    }
+
+    .about-content p {
+        margin-right: 0;
+    }
+    
+    .about-us h1 {
+        text-align: center;
+    }
+
+    /* Footer: disposición vertical */
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+}
+
+/* Logo en la cabecera */
+header .small-image {
+    width: 20vw; /* El ancho del logo será el 20% del ancho del viewport */
+    max-width: 200px; /* Limitar el tamaño máximo del logo */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    header .small-image {
+        width: 30vw; /* Ajusta el logo a un 30% del viewport en tablets */
+        max-width: 150px; /* Limita el tamaño máximo en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    header .small-image {
+        width: 40vw; /* Ajusta el logo al 40% del viewport en móviles */
+        max-width: 120px; /* Limita el tamaño máximo en móviles */
+    }
+}
